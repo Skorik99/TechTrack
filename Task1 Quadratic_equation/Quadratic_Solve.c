@@ -16,10 +16,10 @@
 
 int QuadrSolve (double a, double b, double c, double *x1, double *x2)
 {
-
-    if (!(isfinite (a)) || !(isfinite (b)) || !(isfinite (c)))
-        exit (EXIT_FAILURE);
-
+    // Проверка корректности полученных данных
+    assert (isfinite (a));
+    assert (isfinite (b));
+    assert (isfinite (c));
     assert (x1 != x2);
     assert (x1 != NULL);
     assert (x2 != NULL);
