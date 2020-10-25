@@ -1,4 +1,5 @@
 #include "Quadratic_Solve.h"
+#include "test.h"
 #include <stdio.h>
 #include <time.h>
 #include <conio.h>
@@ -46,6 +47,25 @@ int main()
         break;
     default:
         printf ("Something went wrong...\n");
+    }
+
+    int answer = -1;
+    printf ("Would you like to see our unit tests from file? (1 -- yes or 0 -- no) \n");
+
+    while (scanf ("%d", &answer) != 1)
+        printf("Try again(enter a correct input)\n");
+
+    if(answer == 0) {
+        printf("OK! Goodbye!");
+    }
+
+    else if(answer == 1) {
+        TestingFromFile("tests.txt");
+    }
+
+    else {
+        printf("Your input is incorrect."
+               "Please run the program again and enter the correct input\n");
     }
 
     getch(); ///Wait before close
